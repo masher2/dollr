@@ -13,6 +13,6 @@ Example:
 
 The current supported sources of information are:
 
-* *twitter*: Retrieves the rate from the last @MonitorDolarVe tweet. This is the default and may require your permission to use the twitter api.
-* *airtm*: Gets all the USD/VES rates from [airtmrates.io](https://airtmrates.com/). **WIP**.
+* `twitter`: Retrieves the rate from the last @MonitorDolarVe tweet. This is the default and may require your permission to use the twitter api.
+* `airtm`: Gets all the USD/VES rates from [airtmrates.io](https://airtmrates.com/). **WIP**.
 
