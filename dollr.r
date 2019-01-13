@@ -9,7 +9,7 @@
 cmdargs <- commandArgs(trailingOnly=TRUE)
 
 if (length(cmdargs) == 0) {
-    cmdargs <- "twitter"
+    cmdargs <- "airtm"
 }
 
 if (cmdargs[1] == "twitter") {
