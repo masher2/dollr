@@ -9,6 +9,7 @@ This script only depends (as of now) in [rtweet](https://airtmrates.com/), I int
 Add this script to yout `PATH` and call it from the terminal, the optional argument identifies the source of the rate. If you give a non recognized source it displays a help message.
 
 Example:
+
 ` dollr.r twitter `
 
 The current supported sources of information are:

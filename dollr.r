@@ -1,5 +1,5 @@
 #! /usr/bin/Rscript
-# Get the parallel USD/VES rate from @MonitorDolarVe
+# Get the parallel USD/VES rate from airtmrates.io or @MonitorDolarVe
 #
 # This script depends on the following packages:
 #   rtweet
@@ -14,12 +14,15 @@ if (cmdargs[1] == "twitter") {
     # @MonitorDolarVe
     write("Retreiving @MonitorDolarVe tweets.", stdout())
     tw <- rtweet::get_timeline("MonitorDolarVe")
-    dolar <- gsub(
+    tw <- tw[grep("^Dólar paralelo", tw$text),][1,]
+    rate <- gsub(
         "^.*(Promedio general = .+BsS).*$",
         "\\1",
-        tw[grep("^Dólar paralelo", tw$text),][[1, "text"]]
+        tw[["text"]]
     )
-    write(dolar, stdout())
+    when <- as.POSIXlt(tw[["created_at"]], tz = Sys.timezone())
+    when <- strftime(when, format = "%H:%M %d/%m/%Y")
+    write(sprintf("\"%s\" @ [%s]", rate, when), stdout())
 
 } else {
     # Help Message
