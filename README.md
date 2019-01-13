@@ -1,8 +1,8 @@
 # Dollr
 
-Inspired in the sudden skyrocketting (+300% in 7 days) of the USD price related to the VES and the burden that represents looking for the rate manually I developed this R script to save some minutes of my time every week.
+Inspired in the sudden skyrocketting (+300% in 7 days (03/01/2019 to 10/01/2019)) of the USD price related to the VES and the burden that represents looking for the rate manually I developed this R script to save some minutes of my time every week.
 
-This script only depends (as of now) in [rtweet](https://airtmrates.com/), I intend to keep the dependencies to a minimum while maybe adding more sources in the future.
+This script only depends (as of now) in [rtweet](https://rtweet.info/) and [knitr](https://yihui.name/knitr/), I intend to keep the dependencies to a minimum while maybe adding more sources in the future.
 
 ## Usage
 
@@ -14,6 +14,6 @@ Example:
 
 The current supported sources of information are:
 
-* `twitter`: Retrieves the rate from the last @MonitorDolarVe tweet. This is the default and may require your permission to use the twitter api.
-* `airtm`: Gets all the USD/VES rates from [airtmrates.io](https://airtmrates.com/). **WIP**.
+* `twitter`: Retrieves the rate from the last @MonitorDolarVe tweet. This may require your permission to use the twitter api.
+* `airtm`: Gets all the USD/VES rates from [airtmrates.io](https://airtmrates.com/). The default, requires `knitr` to dislay the results nicely on the terminal.
 
